@@ -16,9 +16,12 @@ import re
 import sys
 import zipfile
 
-PAPER = r"i:\生物科学家\论文"
-EN = os.path.join(PAPER, "manuscript", "C006_RICTOR_methionine_bifurcation_hypothesis_EN.md")
-CN = os.path.join(PAPER, "manuscript", "C006_RICTOR蛋氨酸循环分岔假说_v0.md")
+HERE = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.dirname(HERE)
+EXAMPLE = os.path.join(REPO, "example")
+EN = os.path.join(EXAMPLE, "manuscript_EN.md")
+CN = os.path.join(EXAMPLE, "manuscript_CN.md")
+SUBMISSION = os.path.join(EXAMPLE, "submission")
 
 # Medical Hypotheses 六段结构（英文稿标题）
 EXPECTED_SECTIONS = [
@@ -315,11 +318,16 @@ def check_submission_package():
         if not ok:
             status = max(status, sev)
 
+    if not os.path.isdir(SUBMISSION):
+        items.append({"item": "submission-package", "ok": True,
+                      "detail": "未观察（无 submission 目录；示例未含投稿包，D13 不评分）"})
+        return {"status": 0, "items": items}
+
     files = ["1_Manuscript.docx", "2_Highlights.docx",
              "3_Title_page_with_author_details.docx", "4_Cover_letter.docx",
              "5_Declaration_of_Generative_AI.docx"]
     for f in files:
-        p = os.path.join(PAPER, "submission", f)
+        p = os.path.join(SUBMISSION, f)
         add(f"exists:{f}", os.path.exists(p), p, 2)
         if not os.path.exists(p):
             continue

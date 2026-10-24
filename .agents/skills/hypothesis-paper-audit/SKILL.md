@@ -5,7 +5,10 @@ description: "假说论文自审计与自我提升：对照可扩展评分表（
 
 # 假说论文自审计与自我提升（hypothesis-paper-audit）
 
-让论文具备「每审一遍就厚一层」的能力：审计 → 提炼经验 → 自改或提案 → 下轮更强。本技能只规定**怎么审计、怎么记录、什么能自己改、什么必须提案**，不替代写作技能（写作规范见 `insight-synthesis\hypothesis_paper_format.md`）。
+> **本仓库范围（开源版）**：这里只包含**审计环节**——十五维评分框架（本文件）、确定性检查脚本（`scripts\check_paper.py`、`scripts\_verify_doi.py`）、运行日志模板（`assets\run-log-template.md`）与经验库（`lessons.md`）。
+> 文中提到的**上游工具**（`insight_scan.py` 洞见引擎、`novelty_gate.py` 新颖性闸门、`insight-synthesis` 写作规范、选题/日报流水线）属于作者更完整的个人研究系统，**不在本仓库内**；它们对应的环节可依据本文描述自行实现或替换。审计脚本本身**零第三方依赖、纯标准库**，可直接跑通 `example\` 下的示例稿。
+
+让论文具备「每审一遍就厚一层」的能力：审计 → 提炼经验 → 自改或提案 → 下轮更强。本技能只规定**怎么审计、怎么记录、什么能自己改、什么必须提案**，不替代写作技能（写作规范属于上游 `insight-synthesis` 环节）。
 
 ## 触发时机
 
@@ -25,7 +28,7 @@ description: "假说论文自审计与自我提升：对照可扩展评分表（
 ## 核心文件约定
 
 ```
-i:\生物科学家\论文\audit\
+<PROJECT_ROOT>\audit\
 ├── runs\YYYY-MM-DD.md       # 每次审计的复盘日志（追加不覆盖）
 ├── lessons.md               # 提炼后的持久经验库（唯一权威经验文件）
 └── proposals\YYYY-MM-DD.md  # 需改写作规范 / 期刊策略 / 投稿包结构的提案
@@ -60,12 +63,12 @@ i:\生物科学家\论文\audit\
 > **维度数量不固定**：下表是当前版本，随工作推进按「扩展机制」增维；已增维在运行日志中记录。禁止为了凑数增维，只增「本轮工作真实暴露、且下一稿会因此改变行为」的维度。
 >
 > **第 8、9、11、12、13 维由确定性脚本自动判定**，不靠目测：
-> `python .agents\skills\hypothesis-paper-audit\scripts\check_paper.py`
+> `python scripts\check_paper.py`
 > 退出码：0 通过 / 1 告警 / 2 失败。脚本结论可直接作为对应维度的证据填入运行日志；
 > 脚本报失败时该维度即为「失败」，禁止用「目测正常」覆盖。
 >
 > **第 1、5、10、15 维脚本给启发式线索**（非判定），人工复核后定档。
-> **第 14 维**用 `i:\生物科学家\论文\scripts\_verify_doi.py`（读稿件文献表，逐条 Crossref 核验）。
+> **第 14 维**用 `scripts\_verify_doi.py`（读稿件文献表，逐条 Crossref 核验）。
 
 | 维度 | 检查要点 |
 |---|---|
@@ -116,7 +119,7 @@ i:\生物科学家\论文\audit\
 
 1. **先跑确定性脚本**（不占上下文、结果客观）：
    ```
-   python .agents\skills\hypothesis-paper-audit\scripts\check_paper.py --json audit\last_check.json
+   python scripts\check_paper.py --json audit\last_check.json
    ```
    记录退出码；脚本发现的问题自动构成第 8、9、11 维结论，并把失败明细原文抄进运行日志。
 2. **对照评分表逐项打分**，证据必须具体（文件名、数字、行号、退出码），禁止「一切正常」式空话；随后执行扩展机制发现的自定义检查项

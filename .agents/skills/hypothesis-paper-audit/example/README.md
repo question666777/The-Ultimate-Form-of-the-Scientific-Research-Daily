@@ -8,7 +8,8 @@
 ## 怎么跑
 
 ```bash
-# 在仓库根目录执行
+# 在本技能根目录 .agents\skills\hypothesis-paper-audit\ 执行
+# （脚本按自身位置自动定位 example\ 下的稿件）
 python scripts\check_paper.py          # 审计硬约束 + 启发式线索
 python scripts\_verify_doi.py          # 逐条核验 36 条参考文献 DOI（联网）
 ```

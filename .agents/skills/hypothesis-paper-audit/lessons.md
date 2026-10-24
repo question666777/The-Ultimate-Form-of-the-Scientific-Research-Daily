@@ -1,6 +1,6 @@
 # 论文写作经验库（lessons.md）
 
-> 契约见 `..\.agents\skills\hypothesis-paper-audit\SKILL.md`。格式：
+> 契约见 `SKILL.md`。格式：
 > `- **[P###]**（日期｜状态｜#标签）一句话经验 → 来源：触发它的那次审计`
 > 状态：`active` 生效中 / `fixed` 已固化到脚本或写作规范 / `retired` 不再适用。
 > 上限 10 条 active；超出时最老一条转 fixed 或 retired。新经验先查重再追加，禁止语义重复并存。
