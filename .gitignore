@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 审计本地产物（运行生成，不入库）
+audit/last_check.json
+report.json
+last_check.json
