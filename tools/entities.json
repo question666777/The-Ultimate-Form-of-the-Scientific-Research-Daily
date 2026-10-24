@@ -1,0 +1,1250 @@
+{
+  "_meta": {
+    "purpose": "insight_scan.py 的图谱词典：把结论文本里的生物实体归一到规范名（type 用于类型化 metapath 打分），并支撑 findings.md 里手写的三元组（主体-谓词-客体）",
+    "matching": "全 ASCII 的别名按词边界匹配（避免 AR 命中 CAR）；含中文的别名按子串匹配",
+    "triples": "findings.md 每条结论下缩进一行「  - 三元组：(主体, 谓词, 客体)；…」；谓词闭集见 insight_scan.py 的 PREDICATES，本文件不存谓词",
+    "maintenance": "新增实体直接加条目，脚本无需改动；规范名自动并入别名；2026-10-17 补高价值机制实体 + 中英同义别名（语义检索层）",
+    "version": "2026-10-17"
+  },
+  "entities": {
+    "STING": {
+      "type": "protein",
+      "aliases": []
+    },
+    "PD-1/PD-L1": {
+      "type": "pathway",
+      "aliases": [
+        "PD-1",
+        "PD-L1"
+      ]
+    },
+    "CK2": {
+      "type": "protein",
+      "aliases": []
+    },
+    "PIEZO1": {
+      "type": "protein",
+      "aliases": []
+    },
+    "MCA1": {
+      "type": "protein",
+      "aliases": []
+    },
+    "HDAC6": {
+      "type": "protein",
+      "aliases": []
+    },
+    "NPR1": {
+      "type": "protein",
+      "aliases": []
+    },
+    "LAMP2A": {
+      "type": "protein",
+      "aliases": []
+    },
+    "Tau": {
+      "type": "protein",
+      "aliases": []
+    },
+    "α-突触核蛋白": {
+      "type": "protein",
+      "aliases": [
+        "α-synuclein"
+      ]
+    },
+    "p53": {
+      "type": "gene",
+      "aliases": []
+    },
+    "IL-10": {
+      "type": "cytokine",
+      "aliases": []
+    },
+    "IFN-γ": {
+      "type": "cytokine",
+      "aliases": [
+        "干扰素"
+      ]
+    },
+    "CCR5": {
+      "type": "protein",
+      "aliases": []
+    },
+    "卵泡抑素": {
+      "type": "protein",
+      "aliases": [
+        "FST"
+      ]
+    },
+    "雄激素受体": {
+      "type": "protein",
+      "aliases": []
+    },
+    "组蛋白": {
+      "type": "protein",
+      "aliases": [
+        "H2A.Z",
+        "H3-H4",
+        "H3K4me3"
+      ]
+    },
+    "FACT": {
+      "type": "protein",
+      "aliases": []
+    },
+    "聚合酶α": {
+      "type": "protein",
+      "aliases": [
+        "聚合酶 α",
+        "聚合酶α"
+      ]
+    },
+    "Polycomb": {
+      "type": "protein",
+      "aliases": []
+    },
+    "扩张蛋白": {
+      "type": "protein",
+      "aliases": []
+    },
+    "PSNEAT1": {
+      "type": "protein",
+      "aliases": []
+    },
+    "NEAT1": {
+      "type": "rna",
+      "aliases": []
+    },
+    "抗体": {
+      "type": "molecule",
+      "aliases": []
+    },
+    "广谱中和抗体": {
+      "type": "molecule",
+      "aliases": [
+        "bNAb"
+      ]
+    },
+    "CAR": {
+      "type": "receptor",
+      "aliases": []
+    },
+    "MHC": {
+      "type": "molecule",
+      "aliases": [
+        "HLA",
+        "pMHC"
+      ]
+    },
+    "TCR": {
+      "type": "molecule",
+      "aliases": [
+        "T 细胞受体",
+        "T细胞受体"
+      ]
+    },
+    "KRAS": {
+      "type": "gene",
+      "aliases": []
+    },
+    "GNAS": {
+      "type": "gene",
+      "aliases": []
+    },
+    "GSDME": {
+      "type": "gene",
+      "aliases": [
+        "GSDMs",
+        "Gasdermin E",
+        "gasdermin"
+      ]
+    },
+    "EGFRvIII": {
+      "type": "gene",
+      "aliases": []
+    },
+    "KDM2B": {
+      "type": "gene",
+      "aliases": []
+    },
+    "TRIM32": {
+      "type": "gene",
+      "aliases": []
+    },
+    "DNMT1": {
+      "type": "gene",
+      "aliases": []
+    },
+    "R8": {
+      "type": "gene",
+      "aliases": []
+    },
+    "WLG": {
+      "type": "gene",
+      "aliases": []
+    },
+    "Lsp2": {
+      "type": "gene",
+      "aliases": []
+    },
+    "mTOR通路": {
+      "type": "pathway",
+      "aliases": [
+        "mTOR",
+        "RICTOR",
+        "mTORC2"
+      ]
+    },
+    "免疫检查点": {
+      "type": "pathway",
+      "aliases": [
+        "checkpoint",
+        "immune checkpoint",
+        "检查点",
+        "检查点阻断"
+      ]
+    },
+    "IRE1α-XBP1s": {
+      "type": "pathway",
+      "aliases": [
+        "IRE1α",
+        "XBP1s"
+      ]
+    },
+    "CXCL1-CXCR2": {
+      "type": "pathway",
+      "aliases": [
+        "CXCL1",
+        "CXCR2"
+      ]
+    },
+    "BMP": {
+      "type": "pathway",
+      "aliases": []
+    },
+    "C/EBPβ-AEP": {
+      "type": "pathway",
+      "aliases": [
+        "C/EBPβ",
+        "AEP"
+      ]
+    },
+    "Gα12/13": {
+      "type": "pathway",
+      "aliases": [
+        "Gα12",
+        "Gα13"
+      ]
+    },
+    "水杨酸信号": {
+      "type": "pathway",
+      "aliases": [
+        "水杨酸"
+      ]
+    },
+    "机械力感知": {
+      "type": "process",
+      "aliases": [
+        "机械力",
+        "机械力传感",
+        "机械力感应",
+        "机械门控"
+      ]
+    },
+    "胆固醇": {
+      "type": "metabolite",
+      "aliases": []
+    },
+    "心磷脂": {
+      "type": "metabolite",
+      "aliases": [
+        "cardiolipin"
+      ]
+    },
+    "色氨酸": {
+      "type": "metabolite",
+      "aliases": []
+    },
+    "吲哚": {
+      "type": "metabolite",
+      "aliases": []
+    },
+    "硫化氢": {
+      "type": "metabolite",
+      "aliases": [
+        "臭鸡蛋气体"
+      ]
+    },
+    "环八硫": {
+      "type": "metabolite",
+      "aliases": [
+        "S8"
+      ]
+    },
+    "NAD+": {
+      "type": "metabolite",
+      "aliases": [
+        "NAD"
+      ]
+    },
+    "BCAA": {
+      "type": "metabolite",
+      "aliases": [
+        "支链氨基酸"
+      ]
+    },
+    "GABA": {
+      "type": "metabolite",
+      "aliases": []
+    },
+    "丝氨酸": {
+      "type": "metabolite",
+      "aliases": []
+    },
+    "麦胶蛋白": {
+      "type": "antigen",
+      "aliases": []
+    },
+    "小胶质细胞": {
+      "type": "cell",
+      "aliases": [
+        "microglia"
+      ]
+    },
+    "巨噬细胞": {
+      "type": "cell",
+      "aliases": [
+        "macrophage",
+        "macrophages"
+      ]
+    },
+    "树突状细胞": {
+      "type": "cell",
+      "aliases": [
+        "dendritic cell",
+        "dendritic cells"
+      ]
+    },
+    "T细胞": {
+      "type": "cell",
+      "aliases": [
+        "T 细胞",
+        "T细胞",
+        "CD8+ T",
+        "CD8+T",
+        "CD4+ T",
+        "CD4+T"
+      ]
+    },
+    "B细胞": {
+      "type": "cell",
+      "aliases": [
+        "B 细胞",
+        "B细胞",
+        "调节性 B 细胞"
+      ]
+    },
+    "星形胶质细胞": {
+      "type": "cell",
+      "aliases": [
+        "astrocyte",
+        "astrocytes"
+      ]
+    },
+    "髓系细胞": {
+      "type": "cell",
+      "aliases": []
+    },
+    "骨细胞": {
+      "type": "cell",
+      "aliases": []
+    },
+    "血清素神经元": {
+      "type": "cell",
+      "aliases": []
+    },
+    "血管内皮": {
+      "type": "cell",
+      "aliases": []
+    },
+    "血小板": {
+      "type": "cell",
+      "aliases": []
+    },
+    "Th17": {
+      "type": "cell",
+      "aliases": []
+    },
+    "iPSC": {
+      "type": "cell",
+      "aliases": [
+        "诱导多能干细胞"
+      ]
+    },
+    "衰老细胞": {
+      "type": "process",
+      "aliases": [
+        "细胞衰老"
+      ]
+    },
+    "线粒体": {
+      "type": "organelle",
+      "aliases": [
+        "mitochondria",
+        "mitochondrial"
+      ]
+    },
+    "线粒体自噬": {
+      "type": "process",
+      "aliases": []
+    },
+    "自噬": {
+      "type": "process",
+      "aliases": [
+        "autophagy",
+        "分子伴侣介导的自噬"
+      ]
+    },
+    "溶酶体": {
+      "type": "organelle",
+      "aliases": [
+        "lysosomal",
+        "lysosome"
+      ]
+    },
+    "核糖体": {
+      "type": "organelle",
+      "aliases": []
+    },
+    "核仁": {
+      "type": "organelle",
+      "aliases": []
+    },
+    "内质网": {
+      "type": "organelle",
+      "aliases": []
+    },
+    "脂滴": {
+      "type": "organelle",
+      "aliases": []
+    },
+    "铁死亡": {
+      "type": "process",
+      "aliases": [
+        "ferroptosis"
+      ]
+    },
+    "脂质过氧化": {
+      "type": "process",
+      "aliases": [
+        "lipid peroxidation",
+        "lipid peroxides"
+      ]
+    },
+    "缺氧": {
+      "type": "condition",
+      "aliases": [
+        "低氧"
+      ]
+    },
+    "炎症": {
+      "type": "process",
+      "aliases": [
+        "inflammation",
+        "inflammatory"
+      ]
+    },
+    "纤维化": {
+      "type": "process",
+      "aliases": []
+    },
+    "凋亡": {
+      "type": "process",
+      "aliases": [
+        "apoptosis",
+        "caspase"
+      ]
+    },
+    "DNA损伤": {
+      "type": "process",
+      "aliases": [
+        "DNA damage",
+        "DNA 损伤",
+        "genotoxic"
+      ]
+    },
+    "DNA甲基化": {
+      "type": "process",
+      "aliases": [
+        "DNA 甲基化",
+        "CpG"
+      ]
+    },
+    "DNA复制": {
+      "type": "process",
+      "aliases": [
+        "DNA 复制"
+      ]
+    },
+    "RNA剪接": {
+      "type": "process",
+      "aliases": [
+        "RNA 剪接",
+        "剪接",
+        "RNA 加工"
+      ]
+    },
+    "去乙酰化": {
+      "type": "process",
+      "aliases": [
+        "乙酰化"
+      ]
+    },
+    "染色质重塑": {
+      "type": "process",
+      "aliases": [
+        "SWI/SNF",
+        "SWI-SNF"
+      ]
+    },
+    "染色质可及性": {
+      "type": "process",
+      "aliases": [
+        "染色质"
+      ]
+    },
+    "表观遗传": {
+      "type": "process",
+      "aliases": []
+    },
+    "生物钟": {
+      "type": "process",
+      "aliases": [
+        "circadian",
+        "circadian rhythm",
+        "昼夜节律",
+        "睡眠-觉醒节律"
+      ]
+    },
+    "阿尔茨海默病": {
+      "type": "disease",
+      "aliases": [
+        "阿尔茨海默"
+      ]
+    },
+    "亨廷顿病": {
+      "type": "disease",
+      "aliases": [
+        "mHTT",
+        "mutant huntingtin",
+        "突变亨廷顿蛋白"
+      ]
+    },
+    "多发性硬化": {
+      "type": "disease",
+      "aliases": []
+    },
+    "癫痫": {
+      "type": "disease",
+      "aliases": []
+    },
+    "脑胶质瘤": {
+      "type": "disease",
+      "aliases": [
+        "胶质瘤",
+        "弥漫性中线胶质瘤",
+        "脑瘤"
+      ]
+    },
+    "胰腺癌": {
+      "type": "disease",
+      "aliases": []
+    },
+    "前列腺癌": {
+      "type": "disease",
+      "aliases": []
+    },
+    "男性乳腺癌": {
+      "type": "disease",
+      "aliases": []
+    },
+    "骨髓瘤": {
+      "type": "disease",
+      "aliases": []
+    },
+    "头颈部鳞癌": {
+      "type": "disease",
+      "aliases": [
+        "头颈部鳞状细胞癌"
+      ]
+    },
+    "克罗恩病": {
+      "type": "disease",
+      "aliases": []
+    },
+    "乳糜泻": {
+      "type": "disease",
+      "aliases": []
+    },
+    "自闭症": {
+      "type": "disease",
+      "aliases": []
+    },
+    "精神分裂症": {
+      "type": "disease",
+      "aliases": []
+    },
+    "痴呆": {
+      "type": "disease",
+      "aliases": []
+    },
+    "囊性纤维化": {
+      "type": "disease",
+      "aliases": []
+    },
+    "牙周炎": {
+      "type": "disease",
+      "aliases": []
+    },
+    "糖尿病": {
+      "type": "disease",
+      "aliases": []
+    },
+    "肥胖": {
+      "type": "phenotype",
+      "aliases": [
+        "体重"
+      ]
+    },
+    "自身免疫": {
+      "type": "disease",
+      "aliases": []
+    },
+    "马铃薯晚疫病": {
+      "type": "disease",
+      "aliases": [
+        "晚疫病"
+      ]
+    },
+    "脾脏": {
+      "type": "organ",
+      "aliases": []
+    },
+    "肝脏": {
+      "type": "organ",
+      "aliases": []
+    },
+    "肠道": {
+      "type": "organ",
+      "aliases": [
+        "肠道细胞"
+      ]
+    },
+    "蓝斑核": {
+      "type": "region",
+      "aliases": []
+    },
+    "前额叶皮层": {
+      "type": "region",
+      "aliases": [
+        "前额叶"
+      ]
+    },
+    "宫颈": {
+      "type": "region",
+      "aliases": []
+    },
+    "侧根": {
+      "type": "region",
+      "aliases": []
+    },
+    "血液": {
+      "type": "region",
+      "aliases": [
+        "外周血",
+        "血清",
+        "血液蛋白质组"
+      ]
+    },
+    "肠道菌群": {
+      "type": "organism",
+      "aliases": [
+        "肠道细菌",
+        "菌群"
+      ]
+    },
+    "EB病毒": {
+      "type": "organism",
+      "aliases": [
+        "EB 病毒",
+        "EBV"
+      ]
+    },
+    "基孔肯雅": {
+      "type": "organism",
+      "aliases": []
+    },
+    "寨卡": {
+      "type": "organism",
+      "aliases": []
+    },
+    "HIV": {
+      "type": "organism",
+      "aliases": []
+    },
+    "SARS-CoV-2": {
+      "type": "organism",
+      "aliases": [
+        "ORF8"
+      ]
+    },
+    "埃博拉": {
+      "type": "organism",
+      "aliases": []
+    },
+    "H5N1": {
+      "type": "organism",
+      "aliases": []
+    },
+    "铜绿假单胞菌": {
+      "type": "organism",
+      "aliases": []
+    },
+    "空肠弯曲菌": {
+      "type": "organism",
+      "aliases": []
+    },
+    "稻瘟病菌": {
+      "type": "organism",
+      "aliases": []
+    },
+    "绿蝽": {
+      "type": "organism",
+      "aliases": []
+    },
+    "按蚊": {
+      "type": "organism",
+      "aliases": [
+        "蚊子"
+      ]
+    },
+    "小麦": {
+      "type": "organism",
+      "aliases": []
+    },
+    "大麦": {
+      "type": "organism",
+      "aliases": []
+    },
+    "水稻": {
+      "type": "organism",
+      "aliases": []
+    },
+    "马铃薯": {
+      "type": "organism",
+      "aliases": []
+    },
+    "溶瘤病毒": {
+      "type": "intervention",
+      "aliases": [
+        "溶瘤腺病毒",
+        "VCN-01"
+      ]
+    },
+    "mRNA": {
+      "type": "molecule",
+      "aliases": [
+        "信使 RNA",
+        "信使RNA"
+      ]
+    },
+    "mRNA疫苗": {
+      "type": "intervention",
+      "aliases": [
+        "mRNA 疫苗"
+      ]
+    },
+    "疫苗": {
+      "type": "intervention",
+      "aliases": []
+    },
+    "CRISPR": {
+      "type": "method",
+      "aliases": [
+        "VIPR"
+      ]
+    },
+    "化疗": {
+      "type": "intervention",
+      "aliases": []
+    },
+    "放疗": {
+      "type": "intervention",
+      "aliases": [
+        "放射治疗"
+      ]
+    },
+    "免疫治疗": {
+      "type": "intervention",
+      "aliases": [
+        "免疫疗法",
+        "新辅助",
+        "肿瘤免疫治疗"
+      ]
+    },
+    "CAR-T": {
+      "type": "intervention",
+      "aliases": [
+        "CAR T"
+      ]
+    },
+    "电场治疗": {
+      "type": "intervention",
+      "aliases": []
+    },
+    "限时进食": {
+      "type": "intervention",
+      "aliases": []
+    },
+    "GLP-1": {
+      "type": "intervention",
+      "aliases": [
+        "safiglipron"
+      ]
+    },
+    "左乙拉西坦": {
+      "type": "drug",
+      "aliases": []
+    },
+    "Omaveloxolone": {
+      "type": "drug",
+      "aliases": []
+    },
+    "lenacapavir": {
+      "type": "drug",
+      "aliases": []
+    },
+    "JAK抑制剂": {
+      "type": "drug",
+      "aliases": [
+        "JAK 抑制剂"
+      ]
+    },
+    "氟西汀": {
+      "type": "drug",
+      "aliases": []
+    },
+    "纳米颗粒": {
+      "type": "method",
+      "aliases": []
+    },
+    "单细胞": {
+      "type": "method",
+      "aliases": []
+    },
+    "空间组学": {
+      "type": "method",
+      "aliases": [
+        "空间转录组",
+        "空间细胞器组学"
+      ]
+    },
+    "流式细胞术": {
+      "type": "method",
+      "aliases": []
+    },
+    "多组学": {
+      "type": "method",
+      "aliases": []
+    },
+    "AI": {
+      "type": "method",
+      "aliases": [
+        "人工智能",
+        "机器学习"
+      ]
+    },
+    "基因调控网络": {
+      "type": "method",
+      "aliases": [
+        "GRN"
+      ]
+    },
+    "遗传关联": {
+      "type": "method",
+      "aliases": [
+        "风险基因"
+      ]
+    },
+    "植物免疫": {
+      "type": "process",
+      "aliases": [
+        "全株防御",
+        "免疫受体"
+      ]
+    },
+    "活体成像": {
+      "type": "method",
+      "aliases": []
+    },
+    "病毒进化树": {
+      "type": "method",
+      "aliases": [
+        "进化树",
+        "系统发育"
+      ]
+    },
+    "寿命": {
+      "type": "phenotype",
+      "aliases": [
+        "长寿"
+      ]
+    },
+    "衰老": {
+      "type": "process",
+      "aliases": [
+        "cellular senescence",
+        "senescence",
+        "senescent",
+        "老化"
+      ]
+    },
+    "更年期": {
+      "type": "phenotype",
+      "aliases": []
+    },
+    "运动": {
+      "type": "intervention",
+      "aliases": []
+    },
+    "社交": {
+      "type": "phenotype",
+      "aliases": []
+    },
+    "饮食": {
+      "type": "factor",
+      "aliases": []
+    },
+    "肿瘤微环境": {
+      "type": "microenvironment",
+      "aliases": [
+        "TME",
+        "tumor microenvironment"
+      ]
+    },
+    "肿瘤突变负荷": {
+      "type": "biomarker",
+      "aliases": [
+        "突变负荷",
+        "TMB"
+      ]
+    },
+    "新抗原": {
+      "type": "antigen",
+      "aliases": []
+    },
+    "性别差异": {
+      "type": "phenotype",
+      "aliases": [
+        "性别特异性"
+      ]
+    },
+    "RSV": {
+      "type": "organism",
+      "aliases": []
+    },
+    "病毒": {
+      "type": "organism",
+      "aliases": []
+    },
+    "昆虫病毒": {
+      "type": "organism",
+      "aliases": []
+    },
+    "肿瘤": {
+      "type": "disease",
+      "aliases": []
+    },
+    "黑色素瘤": {
+      "type": "disease",
+      "aliases": []
+    },
+    "DNA": {
+      "type": "molecule",
+      "aliases": []
+    },
+    "互补序列": {
+      "type": "rna_feature",
+      "aliases": []
+    },
+    "SIRPγ": {
+      "type": "protein",
+      "aliases": []
+    },
+    "抗原": {
+      "type": "molecule",
+      "aliases": []
+    },
+    "Dlk1-Dio3": {
+      "type": "gene",
+      "aliases": []
+    },
+    "干细胞": {
+      "type": "cell",
+      "aliases": [
+        "stem cell",
+        "stem cells"
+      ]
+    },
+    "肌肉": {
+      "type": "organ",
+      "aliases": []
+    },
+    "脑": {
+      "type": "organ",
+      "aliases": []
+    },
+    "淋巴结": {
+      "type": "organ",
+      "aliases": []
+    },
+    "细胞器": {
+      "type": "organelle",
+      "aliases": []
+    },
+    "脑区": {
+      "type": "region",
+      "aliases": []
+    },
+    "根毛": {
+      "type": "region",
+      "aliases": []
+    },
+    "血栓": {
+      "type": "process",
+      "aliases": []
+    },
+    "血管老化": {
+      "type": "process",
+      "aliases": []
+    },
+    "肺损伤": {
+      "type": "process",
+      "aliases": []
+    },
+    "疫情": {
+      "type": "process",
+      "aliases": []
+    },
+    "神经退行": {
+      "type": "process",
+      "aliases": [
+        "neurodegeneration",
+        "neurodegenerative",
+        "神经变性",
+        "神经退行性疾病"
+      ]
+    },
+    "基因沉默": {
+      "type": "process",
+      "aliases": []
+    },
+    "胚胎发育": {
+      "type": "process",
+      "aliases": [
+        "embryogenesis",
+        "embryonic development"
+      ]
+    },
+    "脂代谢": {
+      "type": "process",
+      "aliases": [
+        "lipid metabolism"
+      ]
+    },
+    "代谢": {
+      "type": "process",
+      "aliases": [
+        "metabolic",
+        "metabolism"
+      ]
+    },
+    "神经样特征": {
+      "type": "process",
+      "aliases": []
+    },
+    "疼痛": {
+      "type": "process",
+      "aliases": []
+    },
+    "产热": {
+      "type": "process",
+      "aliases": []
+    },
+    "翻译": {
+      "type": "process",
+      "aliases": []
+    },
+    "核糖体移码": {
+      "type": "process",
+      "aliases": []
+    },
+    "线粒体融合": {
+      "type": "process",
+      "aliases": [
+        "MFN2",
+        "mitochondrial fusion",
+        "mitofusin"
+      ]
+    },
+    "月经周期": {
+      "type": "process",
+      "aliases": []
+    },
+    "育种": {
+      "type": "process",
+      "aliases": []
+    },
+    "抗逆": {
+      "type": "phenotype",
+      "aliases": []
+    },
+    "生长": {
+      "type": "phenotype",
+      "aliases": []
+    },
+    "脑损伤修复": {
+      "type": "phenotype",
+      "aliases": []
+    },
+    "耐药": {
+      "type": "phenotype",
+      "aliases": []
+    },
+    "Delphy": {
+      "type": "method",
+      "aliases": []
+    },
+    "ResolVI": {
+      "type": "method",
+      "aliases": []
+    },
+    "作物遗产": {
+      "type": "method",
+      "aliases": []
+    },
+    "TDP-43": {
+      "type": "protein",
+      "aliases": [
+        "TDP43",
+        "TARDBP"
+      ]
+    },
+    "Notch信号": {
+      "type": "pathway",
+      "aliases": [
+        "Notch",
+        "Notch signalling",
+        "Notch signaling",
+        "NOTCH"
+      ]
+    },
+    "分子伴侣": {
+      "type": "protein",
+      "aliases": [
+        "chaperone",
+        "molecular chaperone"
+      ]
+    },
+    "少突胶质细胞": {
+      "type": "cell",
+      "aliases": [
+        "oligodendrocyte",
+        "oligodendrocytes"
+      ]
+    },
+    "免疫衰老": {
+      "type": "process",
+      "aliases": [
+        "immunosenescence",
+        "immune senescence"
+      ]
+    },
+    "焦亡": {
+      "type": "process",
+      "aliases": [
+        "pyroptosis",
+        "病毒焦亡",
+        "细胞焦亡"
+      ]
+    },
+    "超长链脂质": {
+      "type": "metabolite",
+      "aliases": [
+        "VLCFA",
+        "very long chain fatty acid",
+        "very-long-chain fatty acids",
+        "膜脂质"
+      ]
+    },
+    "脂肪组织": {
+      "type": "organ",
+      "aliases": [
+        "adipose tissue",
+        "adipocyte",
+        "adipocytes",
+        "脂肪细胞"
+      ]
+    },
+    "淋巴管": {
+      "type": "organ",
+      "aliases": [
+        "lymphatic",
+        "lymphatics",
+        "心脏淋巴管",
+        "cardiac lymphatics"
+      ]
+    },
+    "能量代谢": {
+      "type": "process",
+      "aliases": [
+        "energy metabolism",
+        "能量约束",
+        "能量平衡",
+        "energy expenditure"
+      ]
+    },
+    "表观转录组": {
+      "type": "process",
+      "aliases": [
+        "epitranscriptome",
+        "RNA表观修饰",
+        "RNA methylation",
+        "m6A"
+      ]
+    },
+    "细菌效应蛋白": {
+      "type": "protein",
+      "aliases": [
+        "effector protein",
+        "bacterial effector"
+      ]
+    },
+    "髓鞘": {
+      "type": "process",
+      "aliases": [
+        "myelin",
+        "髓鞘形成",
+        "髓鞘损伤",
+        "demyelination"
+      ]
+    },
+    "溶酶体酸化": {
+      "type": "process",
+      "aliases": [
+        "lysosomal acidification",
+        "溶酶体酸度"
+      ]
+    }
+  }
+}

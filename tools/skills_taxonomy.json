@@ -1,0 +1,708 @@
+{
+ "source": "scientific-agent-skills docs/skills.md（K-Dense 官方分类树）",
+ "note": "类别路径为源库官方分类；role 为项目职能角色（源库 Analysis & Methodology 已按项目需要细化拆分）",
+ "total": 137,
+ "skills": {
+  "adaptyv": {
+   "category": "Scientific Packages > Protein Engineering & Design",
+   "role": "领域深挖"
+  },
+  "analytical-method-validation": {
+   "category": "Scientific Packages > Regulatory & Standards Evidence Preparation",
+   "role": "方法与设计评估"
+  },
+  "anndata": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "arbor": {
+   "category": "Scientific Packages > Autonomous Research & Optimization Frameworks",
+   "role": "平台与基础设施"
+  },
+  "arboreto": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "autoskill": {
+   "category": "Scientific Packages > Tool Discovery & Computational Resources",
+   "role": "平台与基础设施"
+  },
+  "benchling-integration": {
+   "category": "Scientific Integrations > Laboratory Information Management Systems (LIMS) & R&D Platforms",
+   "role": "平台与基础设施"
+  },
+  "bgpt-paper-search": {
+   "category": "Scientific Packages > Scientific Communication & Publishing",
+   "role": "检索与获取"
+  },
+  "bids": {
+   "category": "Scientific Packages > Neuroscience & Electrophysiology",
+   "role": "领域深挖"
+  },
+  "biopython": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "bioservices": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "bulk-rnaseq": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "cellxgene-census": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "citation-management": {
+   "category": "Scientific Packages > Scientific Communication & Publishing",
+   "role": "产出与传播"
+  },
+  "cobrapy": {
+   "category": "Scientific Packages > Materials Science & Chemistry",
+   "role": "领域深挖"
+  },
+  "consciousness-council": {
+   "category": "Scientific Thinking & Analysis > Decision & Scenario Analysis",
+   "role": "方法与设计评估"
+  },
+  "dask": {
+   "category": "Scientific Packages > Data Analysis & Visualization",
+   "role": "数据分析"
+  },
+  "database-lookup": {
+   "category": "Scientific Databases & Data Access",
+   "role": "检索与获取"
+  },
+  "datamol": {
+   "category": "Scientific Packages > Cheminformatics & Drug Discovery",
+   "role": "领域深挖"
+  },
+  "deepchem": {
+   "category": "Scientific Packages > Cheminformatics & Drug Discovery",
+   "role": "领域深挖"
+  },
+  "deepspot-m": {
+   "category": "Scientific Packages > Medical Imaging & Digital Pathology",
+   "role": "领域深挖"
+  },
+  "deeptools": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "depmap": {
+   "category": "Scientific Databases & Data Access",
+   "role": "检索与获取"
+  },
+  "diffdock": {
+   "category": "Scientific Packages > Cheminformatics & Drug Discovery",
+   "role": "领域深挖"
+  },
+  "dnanexus-integration": {
+   "category": "Scientific Integrations > Cloud Platforms for Genomics & Biomedical Data",
+   "role": "平台与基础设施"
+  },
+  "docx": {
+   "category": "Scientific Packages > Document Processing & Conversion",
+   "role": "产出与传播"
+  },
+  "esm": {
+   "category": "Scientific Packages > Protein Engineering & Design",
+   "role": "领域深挖"
+  },
+  "etetoolkit": {
+   "category": "Scientific Packages > Phylogenetics & Evolutionary Biology",
+   "role": "领域深挖"
+  },
+  "exa-search": {
+   "category": "Scientific Thinking & Analysis > Web Search & Information Retrieval",
+   "role": "检索与获取"
+  },
+  "experimental-design": {
+   "category": "Scientific Thinking & Analysis > Analysis & Methodology",
+   "role": "方法与设计评估"
+  },
+  "exploratory-data-analysis": {
+   "category": "Scientific Thinking & Analysis > Analysis & Methodology",
+   "role": "数据分析"
+  },
+  "flowio": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "generate-image": {
+   "category": "Scientific Packages > Scientific Communication & Publishing",
+   "role": "产出与传播"
+  },
+  "geniml": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "genomic-coordinates": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "genomic-intelligence": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "get-available-resources": {
+   "category": "Scientific Packages > Tool Discovery & Computational Resources",
+   "role": "平台与基础设施"
+  },
+  "gget": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "glycoengineering": {
+   "category": "Scientific Packages > Protein Engineering & Design",
+   "role": "领域深挖"
+  },
+  "gtars": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "histolab": {
+   "category": "Scientific Packages > Medical Imaging & Digital Pathology",
+   "role": "领域深挖"
+  },
+  "hugging-science": {
+   "category": "Scientific Databases & Data Access",
+   "role": "检索与获取"
+  },
+  "hypothesis-paper-audit": {
+   "category": "项目元技能",
+   "role": "元技能"
+  },
+  "hypogenic": {
+   "category": "Scientific Thinking & Analysis > Analysis & Methodology",
+   "role": "方法与设计评估"
+  },
+  "hypothesis-generation": {
+   "category": "Scientific Thinking & Analysis > Analysis & Methodology",
+   "role": "方法与设计评估"
+  },
+  "imaging-data-commons": {
+   "category": "Scientific Databases & Data Access",
+   "role": "检索与获取"
+  },
+  "infographics": {
+   "category": "Scientific Packages > Scientific Communication & Publishing",
+   "role": "产出与传播"
+  },
+  "insight-synthesis": {
+   "category": "项目元技能",
+   "role": "元技能"
+  },
+  "iso-standards-readiness": {
+   "category": "Scientific Packages > Regulatory & Standards Evidence Preparation",
+   "role": "方法与设计评估"
+  },
+  "labarchive-integration": {
+   "category": "Scientific Integrations > Electronic Lab Notebooks (ELN)",
+   "role": "平台与基础设施"
+  },
+  "lamindb": {
+   "category": "Scientific Packages > Data Management & Infrastructure",
+   "role": "平台与基础设施"
+  },
+  "latchbio-integration": {
+   "category": "Scientific Integrations > Workflow Platforms & Cloud Execution",
+   "role": "平台与基础设施"
+  },
+  "latex-posters": {
+   "category": "Scientific Packages > Scientific Communication & Publishing",
+   "role": "产出与传播"
+  },
+  "liteparse": {
+   "category": "Scientific Packages > Document Processing & Conversion",
+   "role": "产出与传播"
+  },
+  "literature-review": {
+   "category": "Scientific Thinking & Analysis > Analysis & Methodology",
+   "role": "检索与获取"
+  },
+  "markdown-mermaid-writing": {
+   "category": "Scientific Packages > Document Processing & Conversion",
+   "role": "产出与传播"
+  },
+  "markitdown": {
+   "category": "Scientific Packages > Document Processing & Conversion",
+   "role": "产出与传播"
+  },
+  "matchms": {
+   "category": "Scientific Packages > Proteomics & Mass Spectrometry",
+   "role": "领域深挖"
+  },
+  "matplotlib": {
+   "category": "Scientific Packages > Data Analysis & Visualization",
+   "role": "数据分析"
+  },
+  "medchem": {
+   "category": "Scientific Packages > Cheminformatics & Drug Discovery",
+   "role": "领域深挖"
+  },
+  "modal": {
+   "category": "Scientific Packages > Data Management & Infrastructure",
+   "role": "平台与基础设施"
+  },
+  "molecular-dynamics": {
+   "category": "Scientific Packages > Protein Engineering & Design",
+   "role": "领域深挖"
+  },
+  "molfeat": {
+   "category": "Scientific Packages > Cheminformatics & Drug Discovery",
+   "role": "领域深挖"
+  },
+  "ncats-arax": {
+   "category": "Scientific Databases & Data Access",
+   "role": "检索与获取"
+  },
+  "networkx": {
+   "category": "Scientific Packages > Data Analysis & Visualization",
+   "role": "数据分析"
+  },
+  "neurokit2": {
+   "category": "Scientific Packages > Neuroscience & Electrophysiology",
+   "role": "领域深挖"
+  },
+  "neuropixels-analysis": {
+   "category": "Scientific Packages > Neuroscience & Electrophysiology",
+   "role": "领域深挖"
+  },
+  "nextflow": {
+   "category": "Scientific Integrations > Workflow Platforms & Cloud Execution",
+   "role": "平台与基础设施"
+  },
+  "omero-integration": {
+   "category": "Scientific Integrations > Microscopy & Bio-image Data",
+   "role": "领域深挖"
+  },
+  "onekgpd": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "ontology-term-resolution": {
+   "category": "Scientific Databases & Data Access",
+   "role": "检索与获取"
+  },
+  "open-notebook": {
+   "category": "Scientific Integrations > Electronic Lab Notebooks (ELN)",
+   "role": "平台与基础设施"
+  },
+  "optimize-for-gpu": {
+   "category": "Scientific Packages > Data Management & Infrastructure",
+   "role": "平台与基础设施"
+  },
+  "pacsomatic": {
+   "category": "Scientific Integrations > Workflow Platforms & Cloud Execution",
+   "role": "平台与基础设施"
+  },
+  "paper-lookup": {
+   "category": "Scientific Packages > Research Methodology & Proposal Writing",
+   "role": "检索与获取"
+  },
+  "paperclip": {
+   "category": "Scientific Packages > Research Methodology & Proposal Writing",
+   "role": "检索与获取"
+  },
+  "paperzilla": {
+   "category": "Scientific Packages > Research Methodology & Proposal Writing",
+   "role": "检索与获取"
+  },
+  "parallel-web": {
+   "category": "Scientific Thinking & Analysis > Web Search & Information Retrieval",
+   "role": "检索与获取"
+  },
+  "pathml": {
+   "category": "Scientific Packages > Medical Imaging & Digital Pathology",
+   "role": "领域深挖"
+  },
+  "pathogen-variant-surveillance": {
+   "category": "Scientific Databases & Data Access",
+   "role": "检索与获取"
+  },
+  "pathway-enrichment": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "pdf": {
+   "category": "Scientific Packages > Document Processing & Conversion",
+   "role": "产出与传播"
+  },
+  "peer-review": {
+   "category": "Scientific Thinking & Analysis > Analysis & Methodology",
+   "role": "方法与设计评估"
+  },
+  "phylogenetics": {
+   "category": "Scientific Packages > Phylogenetics & Evolutionary Biology",
+   "role": "领域深挖"
+  },
+  "pkpd-modeling": {
+   "category": "Scientific Packages > Pharmacology & Pharmacometrics",
+   "role": "方法与设计评估"
+  },
+  "polars": {
+   "category": "Scientific Packages > Data Analysis & Visualization",
+   "role": "数据分析"
+  },
+  "polars-bio": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "pptx": {
+   "category": "Scientific Packages > Document Processing & Conversion",
+   "role": "产出与传播"
+  },
+  "pptx-posters": {
+   "category": "Scientific Packages > Scientific Communication & Publishing",
+   "role": "产出与传播"
+  },
+  "primekg": {
+   "category": "Scientific Databases & Data Access",
+   "role": "检索与获取"
+  },
+  "protocolsio-integration": {
+   "category": "Scientific Integrations > Protocol Management & Sharing",
+   "role": "平台与基础设施"
+  },
+  "pydeseq2": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "pydicom": {
+   "category": "Scientific Packages > Medical Imaging & Digital Pathology",
+   "role": "领域深挖"
+  },
+  "pyhealth": {
+   "category": "Scientific Packages > Healthcare AI & Clinical Machine Learning",
+   "role": "领域深挖"
+  },
+  "pymc": {
+   "category": "Scientific Packages > Machine Learning & Deep Learning",
+   "role": "数据分析"
+  },
+  "pyopenms": {
+   "category": "Scientific Packages > Proteomics & Mass Spectrometry",
+   "role": "领域深挖"
+  },
+  "pysam": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "pytdc": {
+   "category": "Scientific Packages > Cheminformatics & Drug Discovery",
+   "role": "领域深挖"
+  },
+  "pytorch-lightning": {
+   "category": "Scientific Packages > Machine Learning & Deep Learning",
+   "role": "数据分析"
+  },
+  "pyzotero": {
+   "category": "Scientific Packages > Scientific Communication & Publishing",
+   "role": "检索与获取"
+  },
+  "rdkit": {
+   "category": "Scientific Packages > Cheminformatics & Drug Discovery",
+   "role": "领域深挖"
+  },
+  "research-grants": {
+   "category": "Scientific Packages > Research Methodology & Proposal Writing",
+   "role": "方法与设计评估"
+  },
+  "research-lookup": {
+   "category": "Scientific Packages > Research Methodology & Proposal Writing",
+   "role": "检索与获取"
+  },
+  "rowan": {
+   "category": "Scientific Packages > Cheminformatics & Drug Discovery",
+   "role": "领域深挖"
+  },
+  "scanpy": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "scholar-evaluation": {
+   "category": "Scientific Packages > Research Methodology & Proposal Writing",
+   "role": "方法与设计评估"
+  },
+  "scientific-brainstorming": {
+   "category": "Scientific Thinking & Analysis > Analysis & Methodology",
+   "role": "方法与设计评估"
+  },
+  "scientific-critical-thinking": {
+   "category": "Scientific Thinking & Analysis > Analysis & Methodology",
+   "role": "方法与设计评估"
+  },
+  "scientific-schematics": {
+   "category": "Scientific Packages > Scientific Communication & Publishing",
+   "role": "产出与传播"
+  },
+  "scientific-slides": {
+   "category": "Scientific Packages > Scientific Communication & Publishing",
+   "role": "产出与传播"
+  },
+  "scientific-visualization": {
+   "category": "Scientific Thinking & Analysis > Analysis & Methodology",
+   "role": "产出与传播"
+  },
+  "scientific-writing": {
+   "category": "Scientific Thinking & Analysis > Analysis & Methodology",
+   "role": "产出与传播"
+  },
+  "scikit-bio": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "scikit-learn": {
+   "category": "Scientific Packages > Machine Learning & Deep Learning",
+   "role": "数据分析"
+  },
+  "scikit-survival": {
+   "category": "Scientific Packages > Machine Learning & Deep Learning",
+   "role": "数据分析"
+  },
+  "scvelo": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "scvi-tools": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "seaborn": {
+   "category": "Scientific Packages > Data Analysis & Visualization",
+   "role": "数据分析"
+  },
+  "self-audit": {
+   "category": "项目元技能",
+   "role": "元技能"
+  },
+  "shap": {
+   "category": "Scientific Packages > Machine Learning & Deep Learning",
+   "role": "数据分析"
+  },
+  "statistical-analysis": {
+   "category": "Scientific Thinking & Analysis > Analysis & Methodology",
+   "role": "数据分析"
+  },
+  "statistical-power": {
+   "category": "Scientific Thinking & Analysis > Analysis & Methodology",
+   "role": "方法与设计评估"
+  },
+  "statsmodels": {
+   "category": "Scientific Packages > Machine Learning & Deep Learning",
+   "role": "数据分析"
+  },
+  "sympy": {
+   "category": "Scientific Packages > Engineering & Simulation",
+   "role": "数据分析"
+  },
+  "tamarind": {
+   "category": "Scientific Packages > Protein Engineering & Design",
+   "role": "领域深挖"
+  },
+  "tiledbvcf": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  },
+  "torch-geometric": {
+   "category": "Scientific Packages > Machine Learning & Deep Learning",
+   "role": "数据分析"
+  },
+  "torchdrug": {
+   "category": "Scientific Packages > Cheminformatics & Drug Discovery",
+   "role": "领域深挖"
+  },
+  "transformers": {
+   "category": "Scientific Packages > Machine Learning & Deep Learning",
+   "role": "数据分析"
+  },
+  "umap-learn": {
+   "category": "Scientific Packages > Machine Learning & Deep Learning",
+   "role": "数据分析"
+  },
+  "uncertainty-and-units": {
+   "category": "Scientific Packages > Data Analysis & Visualization",
+   "role": "数据分析"
+  },
+  "vaex": {
+   "category": "Scientific Packages > Data Analysis & Visualization",
+   "role": "数据分析"
+  },
+  "venue-templates": {
+   "category": "Scientific Packages > Scientific Communication & Publishing",
+   "role": "产出与传播"
+  },
+  "waypoint-bio": {
+   "category": "未收录",
+   "role": "领域深挖"
+  },
+  "what-if-oracle": {
+   "category": "Scientific Thinking & Analysis > Decision & Scenario Analysis",
+   "role": "方法与设计评估"
+  },
+  "xlsx": {
+   "category": "Scientific Packages > Document Processing & Conversion",
+   "role": "产出与传播"
+  },
+  "zarr-python": {
+   "category": "Scientific Packages > Bioinformatics & Genomics",
+   "role": "领域深挖"
+  }
+ },
+ "roles": {
+  "产出与传播": [
+   "citation-management",
+   "docx",
+   "generate-image",
+   "infographics",
+   "latex-posters",
+   "liteparse",
+   "markdown-mermaid-writing",
+   "markitdown",
+   "pdf",
+   "pptx",
+   "pptx-posters",
+   "scientific-schematics",
+   "scientific-slides",
+   "scientific-visualization",
+   "scientific-writing",
+   "venue-templates",
+   "xlsx"
+  ],
+  "元技能": [
+   "hypothesis-paper-audit",
+   "insight-synthesis",
+   "self-audit"
+  ],
+  "平台与基础设施": [
+   "arbor",
+   "autoskill",
+   "benchling-integration",
+   "dnanexus-integration",
+   "get-available-resources",
+   "labarchive-integration",
+   "lamindb",
+   "latchbio-integration",
+   "modal",
+   "nextflow",
+   "open-notebook",
+   "optimize-for-gpu",
+   "pacsomatic",
+   "protocolsio-integration"
+  ],
+  "数据分析": [
+   "dask",
+   "exploratory-data-analysis",
+   "matplotlib",
+   "networkx",
+   "polars",
+   "pymc",
+   "pytorch-lightning",
+   "scikit-learn",
+   "scikit-survival",
+   "seaborn",
+   "shap",
+   "statistical-analysis",
+   "statsmodels",
+   "sympy",
+   "torch-geometric",
+   "transformers",
+   "umap-learn",
+   "uncertainty-and-units",
+   "vaex"
+  ],
+  "方法与设计评估": [
+   "analytical-method-validation",
+   "consciousness-council",
+   "experimental-design",
+   "hypogenic",
+   "hypothesis-generation",
+   "iso-standards-readiness",
+   "peer-review",
+   "pkpd-modeling",
+   "research-grants",
+   "scholar-evaluation",
+   "scientific-brainstorming",
+   "scientific-critical-thinking",
+   "statistical-power",
+   "what-if-oracle"
+  ],
+  "检索与获取": [
+   "bgpt-paper-search",
+   "database-lookup",
+   "depmap",
+   "exa-search",
+   "hugging-science",
+   "imaging-data-commons",
+   "literature-review",
+   "ncats-arax",
+   "ontology-term-resolution",
+   "paper-lookup",
+   "paperclip",
+   "paperzilla",
+   "parallel-web",
+   "pathogen-variant-surveillance",
+   "primekg",
+   "pyzotero",
+   "research-lookup"
+  ],
+  "领域深挖": [
+   "adaptyv",
+   "anndata",
+   "arboreto",
+   "bids",
+   "biopython",
+   "bioservices",
+   "bulk-rnaseq",
+   "cellxgene-census",
+   "cobrapy",
+   "datamol",
+   "deepchem",
+   "deepspot-m",
+   "deeptools",
+   "diffdock",
+   "esm",
+   "etetoolkit",
+   "flowio",
+   "geniml",
+   "genomic-coordinates",
+   "genomic-intelligence",
+   "gget",
+   "glycoengineering",
+   "gtars",
+   "histolab",
+   "matchms",
+   "medchem",
+   "molecular-dynamics",
+   "molfeat",
+   "neurokit2",
+   "neuropixels-analysis",
+   "omero-integration",
+   "onekgpd",
+   "pathml",
+   "pathway-enrichment",
+   "phylogenetics",
+   "polars-bio",
+   "pydeseq2",
+   "pydicom",
+   "pyhealth",
+   "pyopenms",
+   "pysam",
+   "pytdc",
+   "rdkit",
+   "rowan",
+   "scanpy",
+   "scikit-bio",
+   "scvelo",
+   "scvi-tools",
+   "tamarind",
+   "tiledbvcf",
+   "torchdrug",
+   "waypoint-bio",
+   "zarr-python"
+  ]
+ }
+}

@@ -1,0 +1,76 @@
+{
+  "_meta": {
+    "purpose": "介质桥接器 R1 的知识资产：把两条结论的现象钉到同一物理实体，判定「同执行器 + 正交旋钮」。由 reason_engine.py 读取。设计见 .agents/skills/insight-synthesis/reason_engine.md",
+    "maintenance": "新介质入词典须能写出 structure/executors/knobs 三要素 + entities 映射，缺一不入；依据文献写进 refs。宁少勿滥。",
+    "schema": {
+      "zh": "中文名",
+      "structure": "归属结构（膜/接触位点/复合体）——对应铁律1 介质具体",
+      "executors": "共同执行器规范名数组；两介质 executors 交集非空 = 同执行器（铁律2）",
+      "knobs": "正交调节旋钮规范名数组；两介质 knobs 交集为空 = 正交（铁律2）",
+      "entities": "指向 tools/entities.json 的规范名，供 R1 反查（F 的实体 ∩ entities ≠ ∅ 则该 F 关联此介质）。只放直接物理量，不放泛过程词",
+      "anchors": "经「落地」推理显式锚定到本介质的 F 编号（人工维护）。R1 关联 = 实体命中 ∪ anchors。落地（把现象翻译成物理量）是知识动作，不能纯靠字符串——F051 属此例：原文只写「脂代谢」，须读原文才知是膜脂不饱和度",
+      "refs": "支撑该介质条目的 DOI"
+    },
+    "source": "首批 7 条迁自 .agents/skills/insight-synthesis/media_bridge.md 第三节；executor 由单值改为数组，并按 F108 依据给 nad_redox 补 OPA1/嵴重塑",
+    "version": "2026-10-11b"
+  },
+  "media": {
+    "cardiolipin": {
+      "zh": "心磷脂",
+      "structure": "线粒体内膜",
+      "executors": ["OPA1/嵴重塑", "呼吸链超复合体"],
+      "knobs": ["酰基链不饱和度", "NAD+/NADH"],
+      "entities": ["心磷脂"],
+      "anchors": ["F051"],
+      "refs": ["10.1073/pnas.2612523123", "10.1126/sciadv.aeh7186"]
+    },
+    "nad_redox": {
+      "zh": "NAD+/NADH",
+      "structure": "线粒体基质 + 胞质",
+      "executors": ["OPA1/嵴重塑", "氧化还原焦点"],
+      "knobs": ["合成侧(NAMPT/NMNAT)", "消耗侧(PARP/CD38/SARM1)"],
+      "entities": ["NAD+", "BCAA"],
+      "refs": ["10.1126/sciadv.aeh7186"]
+    },
+    "mam": {
+      "zh": "ER-线粒体接触位点 MAM",
+      "structure": "ER-mito 接触",
+      "executors": ["Ca²⁺转导", "磷脂交换"],
+      "knobs": ["膜接触距离(结构)", "Ca²⁺信号(功能)"],
+      "entities": ["内质网", "线粒体"],
+      "refs": []
+    },
+    "membrane_tension": {
+      "zh": "膜张力/脂双层曲率",
+      "structure": "质膜/细胞器膜",
+      "executors": ["机械门控通道"],
+      "knobs": ["膜张力(脂质组成/曲率)", "通道构象门控"],
+      "entities": ["机械力感知", "PIEZO1", "MCA1"],
+      "refs": []
+    },
+    "ubiquitin_turnover": {
+      "zh": "泛素-蛋白酶体周转率",
+      "structure": "胞质/核",
+      "executors": ["靶蛋白丰度"],
+      "knobs": ["泛素化标记(E3连接酶)", "降解通量(蛋白酶体/自噬)"],
+      "entities": ["自噬", "STING"],
+      "refs": []
+    },
+    "mhc_tcr": {
+      "zh": "MHC-肽-TCR 结合界面",
+      "structure": "细胞表面",
+      "executors": ["TCR识别与杀伤"],
+      "knobs": ["肽-结合槽亲和力(表位序列)", "MHC呈递密度(HLA)"],
+      "entities": ["MHC", "TCR", "新抗原", "抗原"],
+      "refs": []
+    },
+    "ribosome_decode": {
+      "zh": "核糖体解码几何",
+      "structure": "核糖体A位",
+      "executors": ["肽链延伸/移码"],
+      "knobs": ["密码子-反密码子配对(序列)", "修饰诱导滑移(m1Ψ)"],
+      "entities": ["核糖体", "核糖体移码", "翻译"],
+      "refs": []
+    }
+  }
+}
