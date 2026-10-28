@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8b949e"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="240" fill="none"/>
+  <text x="600" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#8b949e" letter-spacing="1">ONE RUN · SEVEN STAGES · SIXTEEN GATES</text>
+
+  <g font-size="15" font-weight="600" text-anchor="middle">
+    <g>
+      <rect x="24" y="52" width="140" height="52" rx="8" fill="none" stroke="#3fb950" stroke-width="1.6"/>
+      <text x="94" y="76" fill="#3fb950">cover</text>
+      <text x="94" y="94" font-size="11.5" font-weight="400" fill="#8b949e">54 journals</text>
+    </g>
+    <line x1="164" y1="78" x2="186" y2="78" stroke="#8b949e" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="188" y="52" width="140" height="52" rx="8" fill="none" stroke="#2f81f7" stroke-width="1.6"/>
+      <text x="258" y="76" fill="#2f81f7">select</text>
+      <text x="258" y="94" font-size="11.5" font-weight="400" fill="#8b949e">adaptive topics</text>
+    </g>
+    <line x1="328" y1="78" x2="350" y2="78" stroke="#8b949e" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="352" y="52" width="140" height="52" rx="8" fill="none" stroke="#2f81f7" stroke-width="1.6"/>
+      <text x="422" y="76" fill="#2f81f7">connect</text>
+      <text x="422" y="94" font-size="11.5" font-weight="400" fill="#8b949e">typed triples</text>
+    </g>
+    <line x1="492" y1="78" x2="514" y2="78" stroke="#8b949e" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="516" y="52" width="140" height="52" rx="8" fill="none" stroke="#2f81f7" stroke-width="1.6"/>
+      <text x="586" y="76" fill="#2f81f7">reason</text>
+      <text x="586" y="94" font-size="11.5" font-weight="400" fill="#8b949e">bridge · gap · tension</text>
+    </g>
+    <line x1="656" y1="78" x2="678" y2="78" stroke="#8b949e" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="680" y="52" width="140" height="52" rx="8" fill="none" stroke="#d29922" stroke-width="1.6"/>
+      <text x="750" y="76" fill="#d29922">verify</text>
+      <text x="750" y="94" font-size="11.5" font-weight="400" fill="#8b949e">novelty · DOI</text>
+    </g>
+    <line x1="820" y1="78" x2="842" y2="78" stroke="#8b949e" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="844" y="52" width="140" height="52" rx="8" fill="none" stroke="#d29922" stroke-width="1.6"/>
+      <text x="914" y="76" fill="#d29922">audit</text>
+      <text x="914" y="94" font-size="11.5" font-weight="400" fill="#8b949e">16 gates</text>
+    </g>
+    <line x1="984" y1="78" x2="1006" y2="78" stroke="#8b949e" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="1008" y="52" width="160" height="52" rx="8" fill="none" stroke="#3fb950" stroke-width="1.6"/>
+      <text x="1088" y="76" fill="#3fb950">learn</text>
+      <text x="1088" y="94" font-size="11.5" font-weight="400" fill="#8b949e">lessons → checks</text>
+    </g>
+  </g>
+
+  <path d="M1088 112 L1088 138 L94 138 L94 112" fill="none" stroke="#8b949e" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="591" y="132" text-anchor="middle" font-size="11.5" fill="#8b949e">every recorded mistake becomes a deterministic check before the next run</text>
+
+  <g font-size="12" text-anchor="middle" fill="#8b949e">
+    <rect x="24" y="168" width="356" height="46" rx="8" fill="none" stroke="#30363d" stroke-width="1"/>
+    <text x="202" y="188">Python standard library only · no third-party runtime deps</text>
+    <text x="202" y="205" font-size="11">exit 0 pass · 1 warn · 2 fail</text>
+
+    <rect x="400" y="168" width="356" height="46" rx="8" fill="none" stroke="#30363d" stroke-width="1"/>
+    <text x="578" y="188">local-first · your SMTP, your data</text>
+    <text x="578" y="205" font-size="11">products stay private, the loop is public</text>
+
+    <rect x="776" y="168" width="392" height="46" rx="8" fill="none" stroke="#30363d" stroke-width="1"/>
+    <text x="972" y="188">human judgment is never spent on</text>
+    <text x="972" y="205" font-size="11">something a deterministic check can do instead</text>
+  </g>
+</svg>
